@@ -18,19 +18,21 @@
             }
         </script>
     </head>
-    <body class="bg-white p-5">
-        <div class="flex space-x-2">
-            <div class="relative grow ">
+    <body class="bg-white p-5 relative h-[100vh]">
+        <div id="body" class="h-full w-full">
+
+            <div class="flex space-x-2">
+                <div class="relative grow ">
                 <div class="absolute -top-[0.8rem] px-1 left-5 bg-white">
                     Input
                 </div>
-                <div id="in" class="border rounded-xl p-5 h-[40vh] grow overflow-auto" contenteditable="true">  </div>
+                <div id="in" class="border rounded-xl p-5 h-[45vh] grow overflow-auto" contenteditable="true">  </div>
             </div>
             <div class="relative min-w-[10vw] ">
                 <div class="absolute -top-[0.8rem] px-1 left-5 bg-white">
                     Log
                 </div>
-                <div id="log" class="border rounded-xl p-5 h-[40vh] ">  </div>
+                <div id="log" class="border rounded-xl p-5 h-[45vh] ">  </div>
             </div>
         </div>
         <div class="flex space-x-2 mt-5">
@@ -38,15 +40,19 @@
                 <div class="absolute -top-[0.8rem] px-1 left-5 bg-white">
                     Plot
                 </div>
-                <div id="plot" class="border rounded-xl p-5 h-[40vh] grow overflow-auto" >  </div>
+                <div id="plot" class="border rounded-xl p-5 h-[49vh] grow overflow-auto" >  </div>
             </div>
             <div class="relative min-w-[20vw] ">
                 <div class="absolute -top-[0.8rem] px-1 left-5 bg-white">
                     Data
                 </div>
-                <div id="data" class="border rounded-xl p-5 h-[40vh] " >  </div>
+                <div id="data" class="border rounded-xl p-5 h-[41vh] " >  </div>
             </div>
         </div>
+        <div>
+            <button class="absolute bottom-5 right-5 rounded-full bg-gray-500 p-4 cursor-pointer text-white" onclick="{document.getElementById('body').requestFullscreen()}">full</button>
+        </div>
+    </div>
         
         <script>
             const input = document.getElementById("in")
