@@ -5,17 +5,9 @@
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.0/chart.min.js" integrity="sha512-qKyIokLnyh6oSnWsc5h21uwMAQtljqMZZT17CIMXuCQNIfFSFF4tJdMOaJHL9fQdJUANid6OB6DRR0zdHrbWAw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
         <script src="https://cdn.tailwindcss.com"></script>
         <script>
-            const queryString = window.location.search;
-            console.log(queryString);
-            const urlParams = new URLSearchParams(queryString);
-            const isJSON = urlParams.get('json') === "true"
-            const stringData = decodeURI(urlParams.get('data'))
-            console.log(stringData)
-            if(isJSON){
-                var data = JSON.parse(stringData)
-            } else {
-                var data = stringData
-            }
+            window.addEventListener("message", (event) => {
+                var data = event
+                }, false);
         </script>
     </head>
     <body class="bg-white relative h-[100vh]">
